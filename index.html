@@ -456,6 +456,30 @@
 </html>
 
 <script>
+
+$(document).ready(function () {
+    // Kroz sve stavke menija
+    $('.scroll-to-section a').on('click', function (e) {
+        e.preventDefault();  // Sprečava promenu URL-a
+
+        // Ukloni 'active' klasu sa svih linkova
+        $('.scroll-to-section a').removeClass('active');
+
+        // Dodaj 'active' klasu na kliknuti link
+        $(this).addClass('active');
+        
+        // Skroluj do sekcije (ako želiš ovo, možeš zadržati)
+        var targetId = this.hash;  // Target id (npr. #services, #about)
+        var target = $(targetId);  // Pronađi element sa tim id-jem
+        if (target.length) {
+            $('html, body').animate({
+                scrollTop: target.offset().top
+            }, 500);
+        }
+    });
+});
+
+
   var form = document.getElementById("my-form");
   
   async function handleSubmit(event) {
