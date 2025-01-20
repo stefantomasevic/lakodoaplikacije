@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://www.lakodoaplikacije.com/sitemap.xml
