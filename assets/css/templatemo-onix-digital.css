@@ -2091,3 +2091,6 @@ form#my-form {
     margin-bottom: 20px;
   }
 }
+h1 {
+  display: none;
+}
